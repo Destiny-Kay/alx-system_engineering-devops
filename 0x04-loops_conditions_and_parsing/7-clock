@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Displays the clock
+hour=1
+while [ $hour -le 24 ]; do
+	echo "Hour: $hour"
+	minute=1
+	while [ $minute -le 59 ]; do
+		echo "$minute"
+		((minute++))
+
+	done
+	((hour++))
+
+done
+

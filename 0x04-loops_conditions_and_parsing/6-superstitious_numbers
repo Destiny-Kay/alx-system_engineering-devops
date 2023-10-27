@@ -11,5 +11,6 @@ while [ $count -le 20 ]; do
 		echo "bad luck from Italy"
 	fi
 	((count++))
+
 done
 
