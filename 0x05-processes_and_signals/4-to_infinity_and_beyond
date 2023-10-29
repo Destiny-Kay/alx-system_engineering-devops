@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Displays the sentence 'To infinity and beyond' indefinetly
-while [ 1 ]
+while true
 do
 	echo "To infinity and beyond"
 	sleep 2
