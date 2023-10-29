@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Displays the sentence 'To infinity and beyond' indefinetly
+while [ 1 ]
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
+
