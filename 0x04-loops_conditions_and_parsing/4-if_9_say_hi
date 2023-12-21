@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+# Prints a string 10 times and on 9th iter prints 'HI'
+count=1
+while [ $count -le 10 ]; do
+	echo "Best School"
+	if [ $count == 9 ]; then
+		echo "Hi"
+	fi
+	((count++))
+done
+

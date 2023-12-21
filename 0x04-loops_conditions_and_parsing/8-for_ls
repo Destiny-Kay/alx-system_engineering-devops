@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+# Displays contents of the CWD in a  list format
+
+for file in *; do
+	if [ -f "$file" ]; then
+		name_after_dash="${file#*-}"
+		echo "$name_after_dash"
+	fi
+done
+
