@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # Displays the hour and minute clock
 hour=0
 while [ $hour -le 12 ]; do

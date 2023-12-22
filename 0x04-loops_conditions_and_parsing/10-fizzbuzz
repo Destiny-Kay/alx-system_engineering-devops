@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # Displays numbers from 1 to 100
 count=1
 while [ $count -le 100 ]; do

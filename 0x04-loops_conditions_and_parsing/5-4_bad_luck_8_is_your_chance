@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # Displays various strings on 4th and 8th iteration and Best school else
 count=1
 while [ $count -le 10 ]; do

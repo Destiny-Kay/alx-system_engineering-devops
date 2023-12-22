@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # Displays various strings based on the iteration
 count=1
 while [ $count -le 20 ]; do

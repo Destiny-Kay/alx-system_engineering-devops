@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # Gives information about the School file
 file="school"
 if [ -e "$file" ]; then

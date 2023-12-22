@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # Prints a string 10 times and on 9th iter prints 'HI'
 count=1
 while [ $count -le 10 ]; do
