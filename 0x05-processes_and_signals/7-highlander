@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Displays an a string indefinitely
+function display_invincible() {
+	echo I am Invincible
+}
+trap 'display_invincible' SIGTERM
+
+while true; do
+       echo To infinity and beyond
+       sleep 2
+done       
