@@ -4,3 +4,4 @@ exec {'install_flask':
   path    => ['/usr/bin'],
   unless  => '/usr/bin/pip3 show Flask | grep -q "Version: 1.0.2"',
 }
+
