@@ -1,3 +1,10 @@
+global
+	log /dev/log local0
+	maxconn 2048
+	user haproxy
+	group haproxy
+	tune.ssl.default-dh-param 2048
+
 defaults
 	mode http
 	timeout client 15s
@@ -10,14 +17,14 @@ frontend www-http
 	default_backend des_backend
 
 frontend www-https
-	bind *:443 ssl crt /etc/letsencrypt/live/www.destinykevogo.tech/fullchain.pem
+	bind *:443 ssl crt /etc/letsencrypt/live/www.destinykevogo.tech/combined.pem
 	http-request add-header X-Forwarded-Proto https
 	http-request set-header X-SSL %[ssl_fc]
 	acl letsencrypt-acl path_beg /.well-known/acme-challenge/
 	use_backend letsencrypt-backend if letsencrypt-acl
 	default_backend des_backend
 
-backend des-backend
+backend des_backend
 	balance roundrobin
 	redirect scheme https if !{ ssl_fc }
 	server 235177-web-01 54.173.125.53:80 check
