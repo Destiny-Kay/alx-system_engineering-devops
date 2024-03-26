@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 '''uses REST API to get a TODO list progress for a given user'''
+import json
 import requests
 import sys
-import json
 
 
 if __name__ == "__main__":
@@ -15,7 +15,8 @@ if __name__ == "__main__":
     for user in users:
         user_id = user.get('id')
         user_name = user.get('username')
-        tasks = requests.get(f'https://jsonplaceholder.typicode.com/users/{user_id}/todos').json()
+        tod_url = f'https://jsonplaceholder.typicode.com/users/{user_id}/todos'
+        tasks = requests.get(tod_url).json()
         data[user_id] = []
 
         for task in tasks:
